@@ -8,8 +8,8 @@ using AstroPod.Models;
 namespace AstroPod.Migrations
 {
     [DbContext(typeof(AstroPodDbContext))]
-    [Migration("20180512180813_Birthday")]
-    partial class Birthday
+    [Migration("20180512211509_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace AstroPod.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<DateTime>("Birthdate");
+                    b.Property<string>("BirthDate");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();

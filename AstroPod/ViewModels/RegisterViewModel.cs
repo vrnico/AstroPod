@@ -31,8 +31,8 @@ namespace AstroPod.ViewModels
         public string UserRoleId { get; set; }
 
         [Required]
-        [Display(Name = "Birthdate")]
-        public string Birthdate { get; set; }
+        [Display(Name = "BirthDate")]
+        public string BirthDate { get; set; }
 
     }
 }

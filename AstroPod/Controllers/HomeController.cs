@@ -17,17 +17,19 @@ namespace AstroPod.Controllers
     {
         public IActionResult Index()
         {
-            Equator equator = Sun.EquatorialCoordinate(DateTime.Now);
-            Ecliptic mooquator = Moon.EclipticalCoordinate(DateTime.Now);
-            Ecliptic merquator = Mercury.EclipticalCoordinate(DateTime.Now);
-            Ecliptic vequator = Venus.EclipticalCoordinate(DateTime.Now);
-            Ecliptic mequator = Mars.EclipticalCoordinate(DateTime.Now);
-            Ecliptic jequator = Jupiter.EclipticalCoordinate(DateTime.Now);
-            Ecliptic sequator = Saturn.EclipticalCoordinate(DateTime.Now);
-            Ecliptic urquator = Uranus.EclipticalCoordinate(DateTime.Now);
+            DateTime birthday = new DateTime(1991, 6, 5);
+            Equator equator = Sun.EquatorialCoordinate(birthday);
+            Ecliptic mooquator = Moon.EclipticalCoordinate(birthday);
+            Ecliptic merquator = Mercury.EclipticalCoordinate(birthday);
+            Ecliptic vequator = Venus.EclipticalCoordinate(birthday);
+            Ecliptic mequator = Mars.EclipticalCoordinate(birthday);
+            Ecliptic jequator = Jupiter.EclipticalCoordinate(birthday);
+            Ecliptic sequator = Saturn.EclipticalCoordinate(birthday);
+            Ecliptic urquator = Uranus.EclipticalCoordinate(birthday);
             Ecliptic nequator = Neptune.EclipticalCoordinate(DateTime.Now);
             Ecliptic ecliptic = CoordinateSystem.Equatorial2Ecliptic(equator);
-          
+
+            Debug.WriteLine(DateTime.Now);
             Debug.WriteLine("SUN" + ecliptic.Longitude);
             Debug.WriteLine("Moon" + mooquator.Longitude);
             Debug.WriteLine("MERC: " + merquator.Longitude);

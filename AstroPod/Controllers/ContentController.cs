@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AstroPod.Models;
 using System.Security.Principal;
+using AstroAlgo.Model;
+using AstroAlgo.SolarSystem;
+using AstroAlgo.Base;
+using System.Diagnostics;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -28,8 +32,17 @@ namespace AstroPod.Controllers
 
         public IActionResult Index()
         {
+            DateTime birthday = new DateTime(1991, 6, 5);
+
+            Equator equator = Sun.EquatorialCoordinate(birthday);
+
+            Ecliptic ecliptic = CoordinateSystem.Equatorial2Ecliptic(equator);
+            Debug.WriteLine("FAAAAH" + ecliptic.Longitude);
+            Chart newChart = new Chart(
+                ecliptic.Longitude
+                );
             var model = _db.Content.ToList();
-            return View(model);
+            return View(newChart);
         }
 
         public IActionResult IndexVM()

@@ -7,6 +7,8 @@ namespace AstroPod.Models
     public class AppUser : IdentityUser
     {
 
+
+        public string BirthDate { get; set; }
      
     }
 }

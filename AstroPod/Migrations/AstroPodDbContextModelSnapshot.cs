@@ -22,7 +22,7 @@ namespace AstroPod.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<string>("Birthdate");
+                    b.Property<string>("BirthDate");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();

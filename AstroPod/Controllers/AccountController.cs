@@ -9,7 +9,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using AstroPod.Models;
 using AstroPod.ViewModels;
 using AstroPod.Data;
-
+using AstroAlgo.Model;
+using AstroAlgo.SolarSystem;
+using AstroAlgo.Base;
+using System.Diagnostics;
 
 namespace AstroPod.Controllers
 {
@@ -28,6 +31,7 @@ namespace AstroPod.Controllers
 
         public IActionResult Index()
         {
+           
             return View();
         }
 
@@ -40,7 +44,7 @@ namespace AstroPod.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            AppUser user = new AppUser { UserName = model.UserName, Email = model.Email};
+            AppUser user = new AppUser { UserName = model.UserName, Email = model.Email, BirthDate = model.BirthDate};
             user.Roles.Add(new IdentityUserRole<string> { RoleId = Request.Form["role"] });
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             _db.SaveChanges();

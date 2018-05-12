@@ -13,6 +13,7 @@ namespace AstroPod.Models
 
     public class AstroPodDbContext : IdentityDbContext<AppUser>
     {
+        public virtual DbSet<AppUser> AppUser { get; set; }
         public virtual DbSet<Content> Content { get; set; }
 
 
