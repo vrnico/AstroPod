@@ -6,7 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="AstroAlgo" Version="1.0.3" />
+    <PackageReference Include="DatePicker.HTMLHelper" Version="1.2.2.1" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.11" />
     <PackageReference Include="SwissEphNet" Version="2.6.0.23" />
   </ItemGroup>
 

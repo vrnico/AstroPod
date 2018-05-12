@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using NicoPortfolio.ViewModels
+@model RegisterViewModel
+<br>
+<h2>Register a new user</h2>
+<br />
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    <div class="row">
+        @Html.LabelFor(user => user.Email)
+        @Html.TextBoxFor(user => user.Email)
+    </div>
+    <br />
+    <div class="row">
+        @Html.LabelFor(user => user.UserName)
+        @Html.TextBoxFor(user => user.UserName)
+    </div>
+    <br />
+    <div class="row">
+        @Html.LabelFor(user => user.Password)
+        @Html.PasswordFor(user => user.Password)
+    </div>
+    <br>
+    <div class="row">
+        @Html.LabelFor(user => user.ConfirmPassword)
+        @Html.PasswordFor(user => user.ConfirmPassword)
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <input type="submit" value="Register" class="btn-lg btn-success" />
+}

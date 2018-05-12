@@ -9,6 +9,7 @@ using AstroAlgo;
 using AstroAlgo.Base;
 using AstroAlgo.SolarSystem;
 using AstroAlgo.Model;
+using AstroPod.Data;
 
 namespace AstroPod.Controllers
 {
@@ -58,5 +59,11 @@ namespace AstroPod.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
     }
 }
