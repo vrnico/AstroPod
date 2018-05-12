@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System;
 using System.Linq;
 using Microsoft.AspNetCore.Identity;
@@ -26,7 +25,20 @@ namespace AstroPod.Data
 
             };
 
-        }
 
+
+
+            foreach (var r in roles)
+            {
+                context.Roles.Add(r);
+            }
+
+
+
+
+
+
+            context.SaveChanges();
+        }
     }
 }
