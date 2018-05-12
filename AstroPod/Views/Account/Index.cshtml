@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+@model AstroPod.Models.Content
+
+<div class="container" ng-app="app" ng-controller="ContentCtrl">
+    <h2>PORTFOLIO ADMIN </h2>
+
+
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h1>Hello @User.Identity.Name</h1>
+        @using (Html.BeginForm("GetMessages", "Account"))
+        {
+            <input type="submit" class="btn btn-default" value="View Messages" />
+        }
+        @using (Html.BeginForm("LogOff", "Account"))
+        {
+            <input type="submit" class="btn btn-default" value="Log out" />
+        }
+
+    }
+    else
+    {
+        <br />
+        <br />
+        <div class="btn-lg btn btn-danger">@Html.ActionLink("Register", "Register")</div>
+        <br />
+        <br />
+        <div class="btn-lg btn btn-success">@Html.ActionLink("Log in", "Login")</div>
+        <br />
+        <br />
+        <br />
+    }
+
+</div>

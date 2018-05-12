@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+
+<h1>Portfolio Admin Content</h1>
+<div class="content">
+    @if (User.IsInRole("Admin"))
+    {
+        <br />
+        <button class="btn-success">@Html.ActionLink("Add A New Item", "New")</button>
+        <br />
+        <br />
+
+    }
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Description</th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>Admin Actions</th>}
+        </tr>
+        <tbody class="tbody"></tbody>
+
+    </table>
+</div>
+
+<script>
+
+    //ajax call
+    $.ajax({
+        type: 'GET',
+        url: '@Url.Action("HelloAjax")', success: function (result) {
+            result.forEach(function (content) {
+                console.log("RESULT: " + result)
+                $(".tbody").append(
+                    "<tr>" +
+                    "<td>" + content.title + "</td>" +
+                    "<td><img src='" + content.image + "'></td>" +
+                    "<td>" + content.description + "</td>" +
+                    "<td>" +
+                    "<a href='Content/Add/" + content.contentId + "'>Edit Content</a> | " +
+                    "<a href='Content/Delete/" + content.contentId + "'>Delete</a>" +
+                    "</td>" +
+                    "</tr>"
+                )
+            })
+        }
+    });
+</script>

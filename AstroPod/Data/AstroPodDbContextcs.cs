@@ -14,14 +14,17 @@ namespace AstroPod.Models
     public class AstroPodDbContext : IdentityDbContext<AppUser>
     {
 
+        public virtual DbSet<Content> Content { get; set; }
 
 
 
 
 
 
-
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseMySql(Startup.ConnectionString);
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseMySql(Startup.ConnectionString);
+        }
 
         public AstroPodDbContext(DbContextOptions<AstroPodDbContext> options) : base(options)
         { }

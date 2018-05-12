@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System;
+using System.Linq;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +14,19 @@ namespace AstroPod.Data
     {
         public static void Initialize(AstroPodDbContext context)
         {
-   
+            if (context.Roles.Any())
+            {
+                return;
+            }
+
+
+            var roles = new IdentityRole[]
+            {
+                new IdentityRole() { Name = "Admin" }
+
+            };
+
         }
+
     }
 }
