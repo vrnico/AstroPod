@@ -1,22 +1,9 @@
-﻿@*@{
-        ViewData["Title"] = "Add Stock";
-        Layout = "~/Views/Shared/_Layout.cshtml";
-    }*@
-
-<br>
-<h2>Add Stock to a New Inventory Item</h2>
-<br />
-<form action='../AddConfirmed/@ViewBag.id' method="post">
-    <div class="row">
-        <label for="title">Title: </label>
-        <input type="text" name="title" id="title" />
-        <label for="description">Description </label>
-        <in@{
+﻿@{
     ViewData["Title"] = "Add Inventory Item";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using NicoPortfolio.Models
+@using AstroPod.Models
 @model Content
 
 <br>
@@ -42,11 +29,4 @@
     <br />
 
     <input type="submit" value="Add" class="btn-lg btn-success" />
-}ut type="text" name="description" id="description" />
-        <input type="text" name="image" id="image" />
-    </div>
-    <br />
-    <br />
-
-    <input type="submit" value="Add" class="btn-lg btn-success" />
-</form>
+}

@@ -3,6 +3,13 @@
     padding-bottom: 20px;
 }
 
+a-scene {
+
+    display: block;
+    width: 50%;
+
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {

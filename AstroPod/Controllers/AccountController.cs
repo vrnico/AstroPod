@@ -40,7 +40,7 @@ namespace AstroPod.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            AppUser user = new AppUser { UserName = model.UserName, Email = model.Email };
+            AppUser user = new AppUser { UserName = model.UserName, Email = model.Email};
             user.Roles.Add(new IdentityUserRole<string> { RoleId = Request.Form["role"] });
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             _db.SaveChanges();
