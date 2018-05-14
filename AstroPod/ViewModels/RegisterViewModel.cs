@@ -32,7 +32,7 @@ namespace AstroPod.ViewModels
 
         [Required]
         [Display(Name = "BirthDate")]
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
     }
 }

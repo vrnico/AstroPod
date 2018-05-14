@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System;
 using System.Security.Claims;
 
 namespace AstroPod.Models
@@ -8,7 +9,7 @@ namespace AstroPod.Models
     {
 
 
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
      
     }
 }

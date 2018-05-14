@@ -13,6 +13,7 @@ using AstroAlgo.Model;
 using AstroAlgo.SolarSystem;
 using AstroAlgo.Base;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace AstroPod.Controllers
 {
@@ -31,8 +32,8 @@ namespace AstroPod.Controllers
 
         public IActionResult Index()
         {
-           
-            return View();
+            string id = _userManager.GetUserId(User);
+            return View(_db.Users.Where(u => u.Id == id).FirstOrDefault());
         }
 
         public IActionResult Register()

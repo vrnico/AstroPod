@@ -33,7 +33,7 @@
 
     <div class="row">
         @Html.LabelFor(user => user.BirthDate)
-        @Html.TextBoxFor(user => user.BirthDate)
+        @Html.TextBoxFor(user => user.BirthDate, new { @type = "date" })
     </div>
     <br />
 

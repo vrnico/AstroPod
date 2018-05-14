@@ -4,16 +4,21 @@
 }
 
 @using System.Security.Claims
-@model AstroPod.Models.Content
+@model AstroPod.Models.AppUser
+@using AstroPod.ViewModels
 
-<div class="container" ng-app="app" ng-controller="ContentCtrl">
+<div class="container">
     <h2>AstroPod Dashboard </h2>
 
 
 
     @if (User.Identity.IsAuthenticated)
     {
+     
+
+
         <h1>Hello @User.Identity.Name</h1>
+        <h2>birthday: @Model.BirthDate</h2>
 
         <a-scene embedded>
             <a-box position="1 0.5 -3" rotation="0 45 0" color="@(User.Identity as AppUser).BirthDate"></a-box>
