@@ -48,7 +48,12 @@ namespace AstroPod.Controllers
             AppUser user = new AppUser { UserName = model.UserName, Email = model.Email, BirthDate = model.BirthDate};
             user.Roles.Add(new IdentityUserRole<string> { RoleId = Request.Form["role"] });
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
+            user.SetData();
             _db.SaveChanges();
+            Debug.WriteLine("FUCCCCCK" + user.UserSun);
+            Debug.WriteLine("FUCCCCCK" + user.UserSun);
+            Debug.WriteLine("FUCCCCCK" + user.UserSun);
+            Debug.WriteLine("FUCCCCCK" + user.UserSun);
 
 
             if (result.Succeeded)
