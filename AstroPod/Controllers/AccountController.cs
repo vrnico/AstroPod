@@ -50,11 +50,10 @@ namespace AstroPod.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             user.SetData();
             user.SetZod();
+            user.SetMoonData();
+            user.SetMoonZod();
             _db.SaveChanges();
-            Debug.WriteLine("FUCCCCCK" + user.UserSun);
-            Debug.WriteLine("FUCCCCCK" + user.UserSun);
-            Debug.WriteLine("FUCCCCCK" + user.UserSun);
-            Debug.WriteLine("FUCCCCCK" + user.UserSun);
+
 
 
             if (result.Succeeded)

@@ -18,8 +18,9 @@
 
 
         <h1>Hello @User.Identity.Name</h1>
-        <h2>birthday: @Model.BirthDate</h2>
+        <h2>Born: @Model.BirthDate</h2>
         <h2>Sun Sign: @Model.SunZod</h2>
+        <h2>Moon Sign: @Model.MoonZod</h2>
 
         <a-scene embedded>
             <a-box position="@Model.UserSun 0.5 -3" rotation="0 45 0" color="@(User.Identity as AppUser).BirthDate"></a-box>
