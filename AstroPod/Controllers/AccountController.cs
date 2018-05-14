@@ -52,6 +52,20 @@ namespace AstroPod.Controllers
             user.SetZod();
             user.SetMoonData();
             user.SetMoonZod();
+            user.SetMercData();
+            user.SetMercZod();
+            user.SetVenusData();
+            user.SetVenusZod();
+            user.SetMarsData();
+            user.SetMarsZod();
+            user.SetJupiterData();
+            user.SetJupiterZod();
+            user.SetSaturnData();
+            user.SetSaturnZod();
+            user.SetUranusData();
+            user.SetUranusZod();
+            user.SetNeptuneData();
+            user.SetNeptuneZod();
             _db.SaveChanges();
 
 

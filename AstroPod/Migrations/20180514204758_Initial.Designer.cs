@@ -8,8 +8,8 @@ using AstroPod.Models;
 namespace AstroPod.Migrations
 {
     [DbContext(typeof(AstroPodDbContext))]
-    [Migration("20180514183648_UserSun")]
-    partial class UserSun
+    [Migration("20180514204758_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,9 +33,19 @@ namespace AstroPod.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<string>("JupiterZod");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("MarsZod");
+
+                    b.Property<string>("MercZod");
+
+                    b.Property<string>("MoonZod");
+
+                    b.Property<string>("NeptuneZod");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256);
@@ -49,14 +59,38 @@ namespace AstroPod.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed");
 
+                    b.Property<string>("SaturnZod");
+
                     b.Property<string>("SecurityStamp");
 
+                    b.Property<string>("SunZod");
+
                     b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UranusZod");
+
+                    b.Property<double>("UserJupiter");
+
+                    b.Property<double>("UserMars");
+
+                    b.Property<double>("UserMerc");
+
+                    b.Property<double>("UserMoon");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
 
+                    b.Property<double>("UserNeptune");
+
+                    b.Property<double>("UserSaturn");
+
                     b.Property<double>("UserSun");
+
+                    b.Property<double>("UserUranus");
+
+                    b.Property<double>("UserVenus");
+
+                    b.Property<string>("VenusZod");
 
                     b.HasKey("Id");
 

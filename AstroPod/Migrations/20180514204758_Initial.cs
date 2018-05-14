@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AstroPod.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,16 +19,34 @@ namespace AstroPod.Migrations
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     Email = table.Column<string>(maxLength: 256, nullable: true),
                     EmailConfirmed = table.Column<bool>(nullable: false),
+                    JupiterZod = table.Column<string>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
+                    MarsZod = table.Column<string>(nullable: true),
+                    MercZod = table.Column<string>(nullable: true),
+                    MoonZod = table.Column<string>(nullable: true),
+                    NeptuneZod = table.Column<string>(nullable: true),
                     NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
                     PasswordHash = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true),
                     PhoneNumberConfirmed = table.Column<bool>(nullable: false),
+                    SaturnZod = table.Column<string>(nullable: true),
                     SecurityStamp = table.Column<string>(nullable: true),
+                    SunZod = table.Column<string>(nullable: true),
                     TwoFactorEnabled = table.Column<bool>(nullable: false),
-                    UserName = table.Column<string>(maxLength: 256, nullable: true)
+                    UranusZod = table.Column<string>(nullable: true),
+                    UserJupiter = table.Column<double>(nullable: false),
+                    UserMars = table.Column<double>(nullable: false),
+                    UserMerc = table.Column<double>(nullable: false),
+                    UserMoon = table.Column<double>(nullable: false),
+                    UserName = table.Column<string>(maxLength: 256, nullable: true),
+                    UserNeptune = table.Column<double>(nullable: false),
+                    UserSaturn = table.Column<double>(nullable: false),
+                    UserSun = table.Column<double>(nullable: false),
+                    UserUranus = table.Column<double>(nullable: false),
+                    UserVenus = table.Column<double>(nullable: false),
+                    VenusZod = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

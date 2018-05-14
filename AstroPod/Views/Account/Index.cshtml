@@ -21,17 +21,31 @@
         <h2>Born: @Model.BirthDate</h2>
         <h2>Sun Sign: @Model.SunZod</h2>
         <h2>Moon Sign: @Model.MoonZod</h2>
+        <h2>Mercury Sign: @Model.MercZod</h2>
+        <h2>Venus Sign: @Model.VenusZod</h2>
+        <h2>Mars Sign: @Model.MarsZod</h2>
+        <h2>Jupiter Sign: @Model.JupiterZod</h2>
+        <h2>Saturn Sign: @Model.SaturnZod</h2>
+        <h2>Uranus Sign: @Model.UranusZod</h2>
+        <h2>Neptune Sign: @Model.NeptuneZod</h2>
+        <h2>Pluto Sign : Scorpio *</h2>
 
         <a-scene embedded>
-            <a-box position="@Model.UserSun 0.5 -3" rotation="0 45 0" color="@(User.Identity as AppUser).BirthDate"></a-box>
+            <a-entity mixin="marker" position="1 2.5 -2"></a-entity>
+            <a-entity position="1 2.6 -2"
+                      text="width: 10; color: yellow; value: Sun In">
+            </a-entity>
+            <a-entity position="1 2.5 -2"
+                      text="width: 10; color: red; value: @Model.SunZod">
+            </a-entity>
             <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
             <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
             <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+
             <a-sky color="#ECECEC"></a-sky>
         </a-scene>
-        {
-            <input type="submit" class="btn btn-default" value="View Messages" />
-        }
+
         @using (Html.BeginForm("LogOff", "Account"))
         {
             <input type="submit" class="btn btn-default" value="Log out" />
