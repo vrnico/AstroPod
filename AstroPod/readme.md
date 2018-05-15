@@ -1,3 +1,5 @@
+
+```
 <~+
 
           *       +
@@ -10,11 +12,12 @@
 +                         +
  O      *        '       .
 AstroPod
-
+```
+```
 .--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
 :::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
 '      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
-
+```
 
 # ARIES
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
@@ -98,7 +101,10 @@ order to get a point across.
 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-VENUS
+## VENUS
+
+Venus rules both Taurus and Libra. In Taurus, Venus represents a sort of self-love, a distinguished personal- aesthetic,
+and a desire to comfort others and to be comforted. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MARS
@@ -361,8 +367,7 @@ PLUTO
 '      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
 SCORPIO
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-ASC
+
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 SUN
@@ -374,7 +379,12 @@ MOON
 MERC
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-VENUS
+## VENUS
+
+Venus in Scorpio is an energy that is magnetized by dark and mysterious subject-matter. There is a chaotic nature to 
+this placement, that leads one to seek out risky interactions. Scorpio Venus may turn their curiousity into
+a gnack for getting into trouble. This placement is the mark of a natural provocateur, someone who indulges in
+satiating their craving for uncommon experiences. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MARS
@@ -441,16 +451,16 @@ PLUTO
 
 
 
-.--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
-:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
-'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
-CAPRICORN
--<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+# CAPRICORN
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-ASC
 
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-SUN
+## SUN
+
+Capricorn Sun is an archetype that is represented by its deterministic output. Sun in Capricorn
+desires to create tangible change through measured action and real progress. Though masters at actualization, Capricorn Sun can also be a source of grave stress, over-exhaustion, and the foundations of burnout culture. Regardless of the 
+wound up nature of this archetype, Capricorn is an energy that represents the responsibilities and pursuits of the cellestial seeker in a constant state of advancement.
+
+
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MOON
@@ -549,6 +559,9 @@ VENUS
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MARS
+
+Mars in Pisces exhibits a driving impulse to create proof of the unseen. They put their energy into
+exploring the outer limits, and pioneers of the subconcious. This energy can lead to an obsessive tendency to explore one's inner vulnerabilities, but the awareness gained from this undertaking can be well-worth the effort. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 JUPITER
