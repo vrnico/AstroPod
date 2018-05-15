@@ -40,6 +40,12 @@ namespace AstroPod.Controllers
             return View(sunMatches);
         }
 
+        public IActionResult IndexVM()
+        {
+            var model = _db.Content;
+            return Json(model);
+        }
+
 
 
         [Authorize(Roles = "Admin")]
