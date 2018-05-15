@@ -65,24 +65,10 @@ A Saturn Aries placement represents an energy that prioritizes initiative over e
 
 Uranus Aries, in our lifetime, affects those born between 1927-1934, and more recently 2010-2018. Uranus in Aries is represented as the catalyst to a new paradigm, the psyche's equivalent of the Big Bang, an energy that transcends old norms to pave way for the new. These periods are as much a venue for turmoil and strife, as they are for creative renaissances and scientific / spiritual break-throughs.
 
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-NEPTUNE
-
-N/A
 
 
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-PLUTO
+# TAURUS
 
-N/A
-
-
-TAURUS
--<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-ASC
-
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 ## SUN
 
 Sun in Taurus is an archetype focused in the tangible presence of this earth. This energy
@@ -185,16 +171,13 @@ PLUTO
 
 
 
-.--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
-:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
-'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
-CANCER
+# CANCER
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 ASC
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-SUN
+## SUN
 
 Sun in Cancer embodies an archetype of intuition and worldly empathy. A natural mother's instinct
 is at the heart of this placement, as they put great care into the things that they are passionate about.
@@ -204,7 +187,13 @@ the need to second guess. Ruled by the moon, Cancer energy courses with the prev
 sources of peace in moments of chaos.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MOON
+## MOON
+
+The Moon is Cancer's natural ruler. Moon in Cancer represents somebody who is intune with their lunar energy.
+This archetype is punctuated by a inherent intuition for the emotional needs of oneself and others around them.
+At its peak this energy can represent an innate empathetic ability to channel knowledge of the psyche into all
+forms of existence. Unevolved Moon in Cancer is prone to projecting their emotional landscape onto others, and 
+various social pratfalls, a product of their insecurity.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MERC
@@ -536,16 +525,18 @@ PLUTO
 
 
 
-.--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
-:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
-'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
-PISCES
--<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-ASC
+
+# PISCES
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-SUN
+## SUN
+
+Pisces Sun is represented as the journey into the abyss for the purpose of self-awareness. The watery
+and subjective strengths of the Piscean archetype allow those with this placement to float in waters
+that others may drown in. Sun in Pisces is prone to bouts of dissociation, and may need to look at 
+matters more objectively, when their thoughts stray to the abstract. A natural creative energy, Pisces
+Sun is able to translate aspects of our collective unconcious and create structures from confusing
+symbols that others may not even be aware of. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MOON
