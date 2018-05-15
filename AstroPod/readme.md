@@ -1,3 +1,5 @@
+
+```
 <~+
 
           *       +
@@ -10,11 +12,12 @@
 +                         +
  O      *        '       .
 AstroPod
-
+```
+```
 .--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
 :::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
 '      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
-
+```
 
 # ARIES
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
@@ -98,7 +101,10 @@ order to get a point across.
 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-VENUS
+## VENUS
+
+Venus rules both Taurus and Libra. In Taurus, Venus represents a sort of self-love, a distinguished personal- aesthetic,
+and a desire to comfort others and to be comforted. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MARS
@@ -361,26 +367,36 @@ PLUTO
 '      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
 SCORPIO
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-ASC
+
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 SUN
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MOON
+## MOON
+
+Scorpio Moon transmits an intense urge to create emotional contact through candid encounters with the truth. The Moon in Scorpio is an archetype that endows a psychic ability to identify the alterior motives of others, although this skill may be a product of their own manipulative conduct. Scorpio Moon is not afraid to be honest with themselves, a trait admired by those who need it the most. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MERC
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-VENUS
+## VENUS
+
+Venus in Scorpio is an energy that is magnetized by dark and mysterious subject-matter. There is a chaotic nature to 
+this placement, that leads one to seek out risky interactions. Scorpio Venus may turn their curiousity into
+a gnack for getting into trouble. This placement is the mark of a natural provocateur, someone who indulges in
+satiating their craving for uncommon experiences. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MARS
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-JUPITER
+## JUPITER
+
+Jupiter in Scorpio enlists itself as an overseer of the dark arts. While others may become disturbed, Scorpio Jupiter indulges in the mysterious, and overcomes the aversions of the crowd for the sake of the experience. This archetype sees
+its existence as an opportunity for greater understanding. Through exploring the murky unknown, they are able to provide 
+truth to an otherwise illusory status quo. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 SATURN
@@ -429,7 +445,11 @@ JUPITER
 SATURN
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-URANUS
+## URANUS
+
+Uranus in Sagittarius affects those born between 1981 and 1988. This is a generation that is concerned with bridging the
+gap between spirituality and technology. They saw and took part in the uprise of the internet connecting unfamiliar societies for the first time, creating portals to the unknown. They champion the concepts of the singularity, artifical intelligence, and unabashed futurism. True pioneers of intellect, they have presented the world with some of its most
+innovative pieces of technology. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 NEPTUNE
@@ -441,16 +461,16 @@ PLUTO
 
 
 
-.--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
-:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
-'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
-CAPRICORN
--<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+# CAPRICORN
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-ASC
 
-->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-SUN
+## SUN
+
+Capricorn Sun is an archetype that is represented by its deterministic output. Sun in Capricorn
+desires to create tangible change through measured action and real progress. Though masters at actualization, Capricorn Sun can also be a source of grave stress, over-exhaustion, and the foundations of burnout culture. Regardless of the 
+wound up nature of this archetype, Capricorn is an energy that represents the responsibilities and pursuits of the cellestial seeker in a constant state of advancement.
+
+
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MOON
@@ -549,6 +569,9 @@ VENUS
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MARS
+
+Mars in Pisces exhibits a driving impulse to create proof of the unseen. They put their energy into
+exploring the outer limits, and pioneers of the subconcious. This energy can lead to an obsessive tendency to explore one's inner vulnerabilities, but the awareness gained from this undertaking can be well-worth the effort. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 JUPITER
