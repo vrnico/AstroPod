@@ -373,7 +373,9 @@ SCORPIO
 SUN
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MOON
+## MOON
+
+Scorpio Moon transmits an intense urge to create emotional contact through candid encounters with the truth. The Moon in Scorpio is an archetype that endows a psychic ability to identify the alterior motives of others, although this skill may be a product of their own manipulative conduct. Scorpio Moon is not afraid to be honest with themselves, a trait admired by those who need it the most. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 MERC
@@ -390,7 +392,11 @@ satiating their craving for uncommon experiences.
 MARS
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-JUPITER
+## JUPITER
+
+Jupiter in Scorpio enlists itself as an overseer of the dark arts. While others may become disturbed, Scorpio Jupiter indulges in the mysterious, and overcomes the aversions of the crowd for the sake of the experience. This archetype sees
+its existence as an opportunity for greater understanding. Through exploring the murky unknown, they are able to provide 
+truth to an otherwise illusory status quo. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 SATURN
@@ -439,7 +445,11 @@ JUPITER
 SATURN
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-URANUS
+## URANUS
+
+Uranus in Sagittarius affects those born between 1981 and 1988. This is a generation that is concerned with bridging the
+gap between spirituality and technology. They saw and took part in the uprise of the internet connecting unfamiliar societies for the first time, creating portals to the unknown. They champion the concepts of the singularity, artifical intelligence, and unabashed futurism. True pioneers of intellect, they have presented the world with some of its most
+innovative pieces of technology. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 NEPTUNE
