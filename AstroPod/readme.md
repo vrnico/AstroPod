@@ -16,75 +16,74 @@ AstroPod
 '      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
 
 
-ARIES
+# ARIES
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-ASC
+## ASC
 
 An ascendant in Aries gives off the appearance of a natural initiator. People may look towards you when they are ready to
 start new projects in their lives. There is a straightforward energy at play here that seems to center you as a protagonist in most events. Good advice would be to not let it go to your head.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-SUN
+## SUN
 
 An Aries Sun placement is representative of an energy that places ego and identity at the forefront. This is the sunrise of the zodiac, and the solar Aries vitality is the rooster that crows with it. You surely awaken the vigor within other signs, and base a lot of your self-worth on your ability to keep the fire burning. A naturally-cast hero within your own story, you respond to fast-paced circumstances in ways that most couldn't keep up with.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MOON
+## MOON
 
 Aries Moon is a sign reserved for those who invest their emotion into new beginnings. Blank canvases, creating new solutions to old problems, and starting from scratch are your calls to action. You feel most comfortable in situations that allow you space to grow and express yourself naturally. You may feel unnecessarily stifled by those who oppose your progress, or get in your way. Learning from past failure is key to success in most situations.
 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MERC
+## MERC
 
 A Mercurian Aries placement points towards an individual who is concerned with the cutting-edge. Aries Mercury is able to mix physical energy with cerebral pursuits. This archetype may be channeled as a physical learner, someone who is able to grasp concepts through tactile reinforcement and muscle memory.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-VENUS
+## VENUS
 
 Venus in Aries represents someone who places their aesthetic worth in their physicality and the quality of their physical energy levels. This is a placement that may be channeled through health-consciousness, or a sort of addiction to high-energy engagements.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MARS
+## MARS
 
 Mars is the natural ruler of Aries. This placement represents a fierce and warrior-like presence. Your physical energy is prioritized as one of your greatest skillsets. It is of utmost necessity to practice your own agency within the structure of your life, you aren't likely to allow others to make decisions for you. This placement demands expansive environments and patient communities, as they may be prone to easy frustrations.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-JUPITER
+## JUPITER
 
 The Aries Jupiter placement speaks to an energy that focuses on expanding one's physical pursuits. A person with Jupiter Aries may have a tendency to assume their view of the matter is the most efficient. Good advice for this placement is to consider all options before diving headfirst into unknown territories. Jupiter Aries is inclined to making hasty decisions before evaluating the entire scenario. First is not always best. The early bird gets the worm, but the early worm gets the bird.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-SATURN
+## SATURN
 
 A Saturn Aries placement represents an energy that prioritizes initiative over efficiency. This energy is best symbolized as the measured decision that brings an event into being. Saturn in Aries prides itself off its skills when working with a blank slate. This energy is an "Ideas Person", the initial spark that takes charge of new beginnings and drives a point across.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-URANUS
+## URANUS
 
 Uranus Aries, in our lifetime, affects those born between 1927-1934, and more recently 2010-2018. Uranus in Aries is represented as the catalyst to a new paradigm, the psyche's equivalent of the Big Bang, an energy that transcends old norms to pave way for the new. These periods are as much a venue for turmoil and strife, as they are for creative renaissances and scientific / spiritual break-throughs.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 NEPTUNE
 
+N/A
 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 PLUTO
 
+N/A
 
 
-.--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
-:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
-'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
 TAURUS
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 ASC
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-SUN
+## SUN
 
 Sun in Taurus is an archetype focused in the tangible presence of this earth. This energy
 is channeled as hands-on, comfort seeking, physically focused, and generally easy to deal with.
@@ -94,12 +93,23 @@ unevolved Sun in Taurus hazards between being stand-offish / stubborn, or annoyi
 prime, Taurus Sun is an easy-going, loving and thoughtful energy.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MOON
+## MOON
 
-
+Taurus Moon marks a natural creature of comfort. This archetype affects it's vessel by creating a craving
+for tangible tranquility. This could be embodied as somebody who creates resources in which others find
+comfort, or as someone who is in a constant state of relaxation. At its worst, this energy can present
+a sort of apathy towards labor. A heightened sense for the physical state, this person may have a natural
+eye for aesthetic as it concerns subjects of a multi-dimensional matter. In other words, this person may
+have an excellent sense of structural knowledge. 
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-MERC
+## MERC
+
+Mercury in Taurus is a physical, intellectual energy that can be channeled as an enhanced spatial reasoning.
+Taurus Mercury communicates through the tangible realm, utilizing physical objects as props for broadcasting
+their thoughts. Mercury in Taurus is a tactile learner, having to work with the earthy energy of Taurus in 
+order to get a point across. 
+
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 VENUS
@@ -126,9 +136,7 @@ PLUTO
 
 
 
-.--.      .-'.      .--.      .--.      .--.      .--.      .`-.      .--.
-:::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\::::::::.\
-'      `--'      `.-'      `--'      `--'      `--'      `-.'      `--'      `
+
 GEMINI
 -<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
