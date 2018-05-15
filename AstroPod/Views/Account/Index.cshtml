@@ -31,20 +31,71 @@
         <h2>Pluto Sign : Scorpio *</h2>
 
         <a-scene embedded>
-            <a-entity mixin="marker" position="1 2.5 -2"></a-entity>
-            <a-entity position="1 2.6 -2"
-                      text="width: 10; color: yellow; value: Sun In">
-            </a-entity>
-            <a-entity position="1 2.5 -2"
-                      text="width: 10; color: red; value: @Model.SunZod">
-            </a-entity>
-            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+            <a-assets>
+                <a-mixin id="cube" geometry="primitive: sphere; depth: 1; height: 1; width: 1"
+                         material="color: #FFFBE0">
+                </a-mixin>
+                <a-mixin id="sun" material="color: yellow"></a-mixin>
+                <a-mixin id="moon" material="color: blue"></a-mixin>
+                <a-mixin id="merc" material="color: #FFA07A"></a-mixin>
+                <a-mixin id="venus" material="color: #FFC300"></a-mixin>
+                <a-mixin id="mars" material="color: #C70039"></a-mixin>
+                <a-mixin id="jupiter" material="color: #935116"></a-mixin>
+                <a-mixin id="saturn" material="color: #6C3483"></a-mixin>
+                <a-mixin id="uranus" material="color: #48C9B0"></a-mixin>
+                <a-mixin id="neptune" material="color: #A9CCE3"></a-mixin>
+            </a-assets>
 
 
-            <a-sky color="#ECECEC"></a-sky>
+            <a-entity layout="type: circle; radius: 2.5; angle: @Model.UserSun;" position="0 0 -5">
+
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube sun"></a-entity>
+            </a-entity>
+
+            <a-entity layout="type: circle; radius: 5; angle: @Model.UserMoon;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube moon"></a-entity>
+            </a-entity>
+
+            <a-entity layout="type: circle; radius: 7.5; angle: @Model.UserMerc;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube merc"></a-entity>
+            </a-entity>
+
+            <a-entity layout="type: circle; radius: 10; angle: @Model.UserVenus;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube venus"></a-entity>
+            </a-entity>
+
+            <a-entity layout="type: circle; radius: 12.5; angle: @Model.UserMars;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube mars"></a-entity>
+            </a-entity>
+
+
+            <a-entity layout="type: circle; radius: 15; angle: @Model.UserJupiter;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube jupiter"></a-entity>
+            </a-entity>
+
+
+            <a-entity layout="type: circle; radius: 17.5; angle: @Model.UserSaturn;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube saturn"></a-entity>
+            </a-entity>
+
+            <a-entity layout="type: circle; radius: 20; angle: @Model.UserUranus;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube uranus"></a-entity>
+            </a-entity>
+
+            <a-entity layout="type: circle; radius: 22.5; angle: @Model.UserNeptune;" position="0 0 -5">
+                <a-entity mixin="cube"></a-entity>
+                <a-entity mixin="cube neptune"></a-entity>
+            </a-entity>
         </a-scene>
+
 
         @using (Html.BeginForm("LogOff", "Account"))
         {
