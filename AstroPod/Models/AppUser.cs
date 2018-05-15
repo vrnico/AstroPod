@@ -34,6 +34,8 @@ namespace AstroPod.Models
         public string UranusZod { get; set; }
         public double UserNeptune { get; set; }
         public string NeptuneZod { get; set; }
+
+
         public AppUser() {
         }
 

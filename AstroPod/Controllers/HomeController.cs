@@ -17,7 +17,7 @@ namespace AstroPod.Controllers
     {
         public IActionResult Index()
         {
-            DateTime birthday = new DateTime(1991, 6, 5);
+            DateTime birthday = new DateTime(1991, 6, 5, 8, 26, 00);
             Equator equator = Sun.EquatorialCoordinate(birthday);
             Ecliptic mooquator = Moon.EclipticalCoordinate(birthday);
             Ecliptic merquator = Mercury.EclipticalCoordinate(birthday);

@@ -32,9 +32,12 @@ namespace AstroPod.Controllers
 
         public IActionResult Index()
         {
-     
-            var model = _db.Content.ToList();
-            return View();
+            string id = _userManager.GetUserId(User);
+            AppUser user = _db.Users.Where(u => u.Id == id).FirstOrDefault();
+            ViewBag.User = _db.Users.Where(u => u.Id == id).FirstOrDefault();
+            List<AppUser> sunMatches = _db.Users.Where(u => u.SunZod == user.SunZod).ToList();
+           
+            return View(sunMatches);
         }
 
         public IActionResult IndexVM()
