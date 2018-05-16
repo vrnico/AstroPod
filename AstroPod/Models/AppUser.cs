@@ -10,9 +10,13 @@ using AstroAlgo.Model;
 using AstroPod.Data;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication;
+using System.Threading.Tasks;
 
 namespace AstroPod.Models
 {
+
+
     public class AppUser : IdentityUser
     {
         public DateTime BirthDate { get; set; }
@@ -36,6 +40,7 @@ namespace AstroPod.Models
         public string NeptuneZod { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
 
+    
 
 
         public AppUser() {

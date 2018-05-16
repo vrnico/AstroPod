@@ -14,6 +14,7 @@ using AstroAlgo.SolarSystem;
 using AstroAlgo.Base;
 using System.Diagnostics;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AstroPod.Controllers
 {
@@ -98,6 +99,8 @@ namespace AstroPod.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
         }
+
+
 
 
     }

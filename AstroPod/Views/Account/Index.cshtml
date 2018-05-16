@@ -19,7 +19,7 @@
 
         <h1>Hello @User.Identity.Name</h1>
         <h2>Born: @Model.BirthDate</h2>
-        <h2>Sun Sign: @Model.SunZod</h2>
+        <h2>Sun Sign: <a href="content/{id}">@Model.SunZod</a></h2>
         <h2>Moon Sign: @Model.MoonZod</h2>
         <h2>Mercury Sign: @Model.MercZod</h2>
         <h2>Venus Sign: @Model.VenusZod</h2>
@@ -48,10 +48,10 @@
 
 
             <a-entity layout="type: circle; radius: 2.5; angle: @Model.UserSun;" position="0 5 -20">
-    
-            
-                    <a-entity></a-entity>
-                    <a-entity mixin="cube sun"></a-entity>
+
+
+                <a-entity></a-entity>
+                <a-entity mixin="cube sun"></a-entity>
             </a-entity>
 
             <a-entity layout="type: circle; radius: 5; angle: @Model.UserMoon;" position="0 5 -20">
@@ -70,7 +70,7 @@
             </a-entity>
 
             <a-entity layout="type: circle; radius: 12.5; angle: @Model.UserMars;" position="0 5 -20">
-           
+
                 <a-entity></a-entity>
                 <a-entity mixin="cube mars"></a-entity>
             </a-entity>

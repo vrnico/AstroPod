@@ -29,14 +29,18 @@ namespace AstroPod.Controllers
             _db = db;
         }
 
-        public IActionResult Index(string id)
+        public IActionResult Index()
         {
-            AppUser user = _db.Users.Where(u => u.Id == id).FirstOrDefault();
-            Content thisContent = _db.Content.FirstOrDefault(c => c.ContentId == user.SunZod);
+           
+            string thisUser = _userManager.GetUserId(User);
+            AppUser user = _db.Users.Where(u => u.Id == thisUser).FirstOrDefault();
+            ViewBag.User = _db.Users.Where(u => u.Id == thisUser).FirstOrDefault();
 
-            Content model = _db.Content.Include(s => s.Comments).FirstOrDefault(o => o.ContentId == id);
-            return View(model);
+            AstroPod.Models.Content.SetList();
+      
+            return View();
 
+            
            
             //string id = _userManager.GetUserId(User);
             
@@ -93,7 +97,7 @@ namespace AstroPod.Controllers
 
         public IActionResult Details(string id)
         {
-            var thisContent = _db.Content.Include(c => c.User).SingleOrDefault(q => q.ContentId == id);
+            var thisContent = _db.Content.Include(c => c.Users).SingleOrDefault(q => q.ContentId == id);
             Comment comment = new Comment
             {
                 Content = thisContent,
