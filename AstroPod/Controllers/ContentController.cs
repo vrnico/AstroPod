@@ -13,7 +13,6 @@ using AstroAlgo.SolarSystem;
 using AstroAlgo.Base;
 using System.Diagnostics;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AstroPod.Controllers
 {
@@ -33,6 +32,7 @@ namespace AstroPod.Controllers
         public IActionResult Index()
         {
             string id = _userManager.GetUserId(User);
+            
             AppUser user = _db.Users.Where(u => u.Id == id).FirstOrDefault();
             ViewBag.User = _db.Users.Where(u => u.Id == id).FirstOrDefault();
             List<AppUser> sunMatches = _db.Users.Where(u => u.SunZod == user.SunZod).ToList();
@@ -91,6 +91,24 @@ namespace AstroPod.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Details(string id)
+        {
+
+            var thisSunZod = _db.Content.Include(u => u.User).SingleOrDefault(q => q.SunZodId == id);
+            Comment comment = new Comment
+            {
+                Content = thisSunZod,
+                SunZodId = id
+            };
+
+           
+
+            ViewBag.Comments = _db.Comments.Where(a => a.SunZodId == id).Include(u => u.User).ToList();
+
+            return View();
+        }
+
 
         public IActionResult HelloAjax()
         {

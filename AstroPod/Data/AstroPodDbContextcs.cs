@@ -15,6 +15,8 @@ namespace AstroPod.Models
     {
         public virtual DbSet<AppUser> AppUser { get; set; }
         public virtual DbSet<Content> Content { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+
 
 
 
@@ -32,6 +34,11 @@ namespace AstroPod.Models
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.Entity<Content>()
+               .HasKey(t => new { t.SunZodId});
+            builder.Entity<Comment>()
+                .HasKey(t => new { t.ContentId });
+
         }
     }
 }

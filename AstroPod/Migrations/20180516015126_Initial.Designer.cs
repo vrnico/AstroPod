@@ -8,7 +8,7 @@ using AstroPod.Models;
 namespace AstroPod.Migrations
 {
     [DbContext(typeof(AstroPodDbContext))]
-    [Migration("20180514204758_Initial")]
+    [Migration("20180516015126_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -104,10 +104,39 @@ namespace AstroPod.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("AstroPod.Models.Comment", b =>
+                {
+                    b.Property<string>("ContentId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Author");
+
+                    b.Property<int>("CommentId");
+
+                    b.Property<DateTime>("PostDate");
+
+                    b.Property<string>("SunZodId");
+
+                    b.Property<string>("TextBody");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("ContentId");
+
+                    b.HasIndex("SunZodId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("AstroPod.Models.Content", b =>
                 {
-                    b.Property<int>("ContentId")
+                    b.Property<string>("SunZodId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ContentId");
 
                     b.Property<string>("Description");
 
@@ -115,7 +144,13 @@ namespace AstroPod.Migrations
 
                     b.Property<string>("Title");
 
-                    b.HasKey("ContentId");
+                    b.Property<string>("UserId");
+
+                    b.HasKey("SunZodId");
+
+                    b.HasAlternateKey("ContentId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Content");
                 });
@@ -225,6 +260,24 @@ namespace AstroPod.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AstroPod.Models.Comment", b =>
+                {
+                    b.HasOne("AstroPod.Models.Content", "Content")
+                        .WithOne("Comments")
+                        .HasForeignKey("AstroPod.Models.Comment", "SunZodId");
+
+                    b.HasOne("AstroPod.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("AstroPod.Models.Content", b =>
+                {
+                    b.HasOne("AstroPod.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

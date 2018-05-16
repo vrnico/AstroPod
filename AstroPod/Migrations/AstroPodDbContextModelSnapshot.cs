@@ -103,10 +103,39 @@ namespace AstroPod.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("AstroPod.Models.Comment", b =>
+                {
+                    b.Property<string>("ContentId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Author");
+
+                    b.Property<int>("CommentId");
+
+                    b.Property<DateTime>("PostDate");
+
+                    b.Property<string>("SunZodId");
+
+                    b.Property<string>("TextBody");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("ContentId");
+
+                    b.HasIndex("SunZodId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("AstroPod.Models.Content", b =>
                 {
-                    b.Property<int>("ContentId")
+                    b.Property<string>("SunZodId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ContentId");
 
                     b.Property<string>("Description");
 
@@ -114,7 +143,13 @@ namespace AstroPod.Migrations
 
                     b.Property<string>("Title");
 
-                    b.HasKey("ContentId");
+                    b.Property<string>("UserId");
+
+                    b.HasKey("SunZodId");
+
+                    b.HasAlternateKey("ContentId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Content");
                 });
@@ -224,6 +259,24 @@ namespace AstroPod.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AstroPod.Models.Comment", b =>
+                {
+                    b.HasOne("AstroPod.Models.Content", "Content")
+                        .WithOne("Comments")
+                        .HasForeignKey("AstroPod.Models.Comment", "SunZodId");
+
+                    b.HasOne("AstroPod.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("AstroPod.Models.Content", b =>
+                {
+                    b.HasOne("AstroPod.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

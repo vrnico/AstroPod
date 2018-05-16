@@ -54,21 +54,6 @@ namespace AstroPod.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Content",
-                columns: table => new
-                {
-                    ContentId = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGeneratedOnAdd", true),
-                    Description = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true),
-                    Title = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Content", x => x.ContentId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -95,6 +80,30 @@ namespace AstroPod.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Content",
+                columns: table => new
+                {
+                    SunZodId = table.Column<string>(nullable: false)
+                        .Annotation("MySql:ValueGeneratedOnAdd", true),
+                    ContentId = table.Column<int>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Content", x => x.SunZodId);
+                    table.UniqueConstraint("AK_Content_ContentId", x => x.ContentId);
+                    table.ForeignKey(
+                        name: "FK_Content_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -183,6 +192,36 @@ namespace AstroPod.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    ContentId = table.Column<string>(nullable: false)
+                        .Annotation("MySql:ValueGeneratedOnAdd", true),
+                    Author = table.Column<string>(nullable: true),
+                    CommentId = table.Column<int>(nullable: false),
+                    PostDate = table.Column<DateTime>(nullable: false),
+                    SunZodId = table.Column<string>(nullable: true),
+                    TextBody = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.ContentId);
+                    table.ForeignKey(
+                        name: "FK_Comments_Content_SunZodId",
+                        column: x => x.SunZodId,
+                        principalTable: "Content",
+                        principalColumn: "SunZodId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Comments_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "EmailIndex",
                 table: "AspNetUsers",
@@ -193,6 +232,22 @@ namespace AstroPod.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_SunZodId",
+                table: "Comments",
+                column: "SunZodId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_UserId",
+                table: "Comments",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Content_UserId",
+                table: "Content",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
@@ -224,7 +279,7 @@ namespace AstroPod.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Content");
+                name: "Comments");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
@@ -240,6 +295,9 @@ namespace AstroPod.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Content");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
