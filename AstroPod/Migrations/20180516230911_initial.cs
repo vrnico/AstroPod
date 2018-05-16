@@ -4,53 +4,20 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AstroPod.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AspNetUsers",
+                name: "Content",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false)
-                        .Annotation("MySql:ValueGeneratedOnAdd", true),
-                    AccessFailedCount = table.Column<int>(nullable: false),
-                    BirthDate = table.Column<DateTime>(nullable: false),
-                    ConcurrencyStamp = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(nullable: false),
-                    JupiterZod = table.Column<string>(nullable: true),
-                    LockoutEnabled = table.Column<bool>(nullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
-                    MarsZod = table.Column<string>(nullable: true),
-                    MercZod = table.Column<string>(nullable: true),
-                    MoonZod = table.Column<string>(nullable: true),
-                    NeptuneZod = table.Column<string>(nullable: true),
-                    NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
-                    PasswordHash = table.Column<string>(nullable: true),
-                    PhoneNumber = table.Column<string>(nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
-                    SaturnZod = table.Column<string>(nullable: true),
-                    SecurityStamp = table.Column<string>(nullable: true),
-                    SunZod = table.Column<string>(nullable: true),
-                    TwoFactorEnabled = table.Column<bool>(nullable: false),
-                    UranusZod = table.Column<string>(nullable: true),
-                    UserJupiter = table.Column<double>(nullable: false),
-                    UserMars = table.Column<double>(nullable: false),
-                    UserMerc = table.Column<double>(nullable: false),
-                    UserMoon = table.Column<double>(nullable: false),
-                    UserName = table.Column<string>(maxLength: 256, nullable: true),
-                    UserNeptune = table.Column<double>(nullable: false),
-                    UserSaturn = table.Column<double>(nullable: false),
-                    UserSun = table.Column<double>(nullable: false),
-                    UserUranus = table.Column<double>(nullable: false),
-                    UserVenus = table.Column<double>(nullable: false),
-                    VenusZod = table.Column<string>(nullable: true)
+                    ContentId = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGeneratedOnAdd", true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                    table.PrimaryKey("PK_Content", x => x.ContentId);
                 });
 
             migrationBuilder.CreateTable(
@@ -83,18 +50,104 @@ namespace AstroPod.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Content",
+                name: "AspNetUsers",
                 columns: table => new
                 {
-                    ContentId = table.Column<string>(nullable: false)
+                    Id = table.Column<string>(nullable: false)
                         .Annotation("MySql:ValueGeneratedOnAdd", true),
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    BirthDate = table.Column<DateTime>(nullable: false),
+                    ConcurrencyStamp = table.Column<string>(nullable: true),
+                    ContentId = table.Column<int>(nullable: true),
+                    Email = table.Column<string>(maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(nullable: false),
+                    JupiterZod = table.Column<string>(nullable: true),
+                    LockoutEnabled = table.Column<bool>(nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
+                    MarsZod = table.Column<string>(nullable: true),
+                    MercZod = table.Column<string>(nullable: true),
+                    MoonId = table.Column<int>(nullable: false),
+                    MoonZod = table.Column<string>(nullable: true),
+                    NeptuneZod = table.Column<string>(nullable: true),
+                    NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
+                    PasswordHash = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
+                    SaturnZod = table.Column<string>(nullable: true),
+                    SecurityStamp = table.Column<string>(nullable: true),
+                    SunId = table.Column<int>(nullable: false),
+                    SunZod = table.Column<string>(nullable: true),
+                    TwoFactorEnabled = table.Column<bool>(nullable: false),
+                    UranusZod = table.Column<string>(nullable: true),
+                    UserJupiter = table.Column<double>(nullable: false),
+                    UserMars = table.Column<double>(nullable: false),
+                    UserMerc = table.Column<double>(nullable: false),
+                    UserMoon = table.Column<double>(nullable: false),
+                    UserName = table.Column<string>(maxLength: 256, nullable: true),
+                    UserNeptune = table.Column<double>(nullable: false),
+                    UserSaturn = table.Column<double>(nullable: false),
+                    UserSun = table.Column<double>(nullable: false),
+                    UserUranus = table.Column<double>(nullable: false),
+                    UserVenus = table.Column<double>(nullable: false),
+                    VenusZod = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AspNetUsers_Content_ContentId",
+                        column: x => x.ContentId,
+                        principalTable: "Content",
+                        principalColumn: "ContentId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetRoleClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGeneratedOnAdd", true),
+                    ClaimType = table.Column<string>(nullable: true),
+                    ClaimValue = table.Column<string>(nullable: true),
+                    RoleId = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "AspNetRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    CommentId = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGeneratedOnAdd", true),
+                    Author = table.Column<string>(nullable: true),
+                    ContentId = table.Column<int>(nullable: true),
+                    PostDate = table.Column<DateTime>(nullable: false),
+                    SunId = table.Column<int>(nullable: false),
+                    TextBody = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Content", x => x.ContentId);
+                    table.PrimaryKey("PK_Comments", x => x.CommentId);
                     table.ForeignKey(
-                        name: "FK_Content_AspNetUsers_UserId",
+                        name: "FK_Comments_Content_ContentId",
+                        column: x => x.ContentId,
+                        principalTable: "Content",
+                        principalColumn: "ContentId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Comments_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -143,27 +196,6 @@ namespace AstroPod.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AspNetRoleClaims",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGeneratedOnAdd", true),
-                    ClaimType = table.Column<string>(nullable: true),
-                    ClaimValue = table.Column<string>(nullable: true),
-                    RoleId = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
-                        column: x => x.RoleId,
-                        principalTable: "AspNetRoles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
@@ -187,34 +219,10 @@ namespace AstroPod.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Comments",
-                columns: table => new
-                {
-                    CommentId = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGeneratedOnAdd", true),
-                    Author = table.Column<string>(nullable: true),
-                    ContentId = table.Column<string>(nullable: true),
-                    PostDate = table.Column<DateTime>(nullable: false),
-                    TextBody = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Comments", x => x.CommentId);
-                    table.ForeignKey(
-                        name: "FK_Comments_Content_ContentId",
-                        column: x => x.ContentId,
-                        principalTable: "Content",
-                        principalColumn: "ContentId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Comments_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUsers_ContentId",
+                table: "AspNetUsers",
+                column: "ContentId");
 
             migrationBuilder.CreateIndex(
                 name: "EmailIndex",
@@ -235,11 +243,6 @@ namespace AstroPod.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_UserId",
                 table: "Comments",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Content_UserId",
-                table: "Content",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -290,13 +293,13 @@ namespace AstroPod.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Content");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Content");
         }
     }
 }

@@ -27,7 +27,7 @@ namespace AstroPod.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("ContentId");
+                    b.Property<int?>("ContentId");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
@@ -118,9 +118,11 @@ namespace AstroPod.Migrations
 
                     b.Property<string>("Author");
 
-                    b.Property<string>("ContentId");
+                    b.Property<int?>("ContentId");
 
                     b.Property<DateTime>("PostDate");
+
+                    b.Property<int>("SunId");
 
                     b.Property<string>("TextBody");
 
@@ -137,7 +139,7 @@ namespace AstroPod.Migrations
 
             modelBuilder.Entity("AstroPod.Models.Content", b =>
                 {
-                    b.Property<string>("ContentId")
+                    b.Property<int>("ContentId")
                         .ValueGeneratedOnAdd();
 
                     b.HasKey("ContentId");

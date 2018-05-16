@@ -18,7 +18,7 @@ namespace AstroPod.Models
         public string TextBody { get; set; }
         public DateTime PostDate { get; set; }
         public virtual AppUser User { get; set; }
-        public string ContentId { get; set; }
+        public int SunId { get; set; }
         public virtual Content Content { get; set; }
     }
 }

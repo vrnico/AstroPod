@@ -8,8 +8,8 @@ using AstroPod.Models;
 namespace AstroPod.Migrations
 {
     [DbContext(typeof(AstroPodDbContext))]
-    [Migration("20180516210034_SunId")]
-    partial class SunId
+    [Migration("20180516230911_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace AstroPod.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("ContentId");
+                    b.Property<int?>("ContentId");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
@@ -44,6 +44,8 @@ namespace AstroPod.Migrations
                     b.Property<string>("MarsZod");
 
                     b.Property<string>("MercZod");
+
+                    b.Property<int>("MoonId");
 
                     b.Property<string>("MoonZod");
 
@@ -117,9 +119,11 @@ namespace AstroPod.Migrations
 
                     b.Property<string>("Author");
 
-                    b.Property<string>("ContentId");
+                    b.Property<int?>("ContentId");
 
                     b.Property<DateTime>("PostDate");
+
+                    b.Property<int>("SunId");
 
                     b.Property<string>("TextBody");
 
@@ -136,7 +140,7 @@ namespace AstroPod.Migrations
 
             modelBuilder.Entity("AstroPod.Models.Content", b =>
                 {
-                    b.Property<string>("ContentId")
+                    b.Property<int>("ContentId")
                         .ValueGeneratedOnAdd();
 
                     b.HasKey("ContentId");

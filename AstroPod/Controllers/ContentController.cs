@@ -91,7 +91,7 @@ namespace AstroPod.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public IActionResult AddConfirmed(string id)
+        public IActionResult AddConfirmed(int id)
         {
             Content content = _db.Content.FirstOrDefault(i => i.ContentId == id);
             _db.Entry(content).State = EntityState.Modified;
@@ -99,23 +99,14 @@ namespace AstroPod.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Details(string id)
+        public IActionResult Details(int id)
         {
-            var thisContent = _db.Content.Include(c => c.Users).SingleOrDefault(q => q.ContentId == id);
-            Comment comment = new Comment
-            {
-                Content = thisContent,
-                ContentId = id
-            };
-            thisContent.Comments = _db.Comments
-                .Where(Comments => Comments.ContentId == id)
-                .OrderByDescending(x => x.PostDate)
-                .Include(u => u.User)
-                .ToList();
-            ViewBag.Comments = _db.Comments.Where(a => a.ContentId == id).Include(u => u.User).ToList();
+   
 
-            return View(comment);
+            return View();
         }
+
+
 
         public IActionResult HelloAjax()
         {

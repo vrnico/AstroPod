@@ -40,12 +40,10 @@ namespace AstroPod.Controllers
             comment.PostDate = DateTime.Now;
             comment.UserId = (this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             var users = _db.Users;
-            var user = _db.Users.FirstOrDefault(q => q.Id == comment.UserId);
-            comment.User = user;
-
+            var user = _db.Users.FirstOrDefault(q => q.SunId == comment.SunId);
             _db.Comments.Add(comment);
             await _db.SaveChangesAsync();
-            return RedirectToAction("Details", "Content", new { id = comment.ContentId });
+            return RedirectToAction("Details", "Content", new { id = comment.SunId });
         }
 
         [HttpPost]

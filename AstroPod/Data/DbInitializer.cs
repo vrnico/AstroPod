@@ -26,14 +26,13 @@ namespace AstroPod.Data
 
             var content = new Content[]
             {
-                new Content() { ContentId = "Capricorn"},
-                new Content() { ContentId = "Gemini"}
+     
             };
 
 
-            foreach (var c in content)
+            foreach (var r in roles)
             {
-                context.Content.Add(c);
+                context.Roles.Add(r);
             }
 
             foreach (var r in roles)

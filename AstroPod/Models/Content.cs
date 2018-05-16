@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using AstroPod.Migrations;
+
 
 namespace AstroPod.Models
 {
@@ -16,7 +16,7 @@ namespace AstroPod.Models
        
 
         [Key]
-        public string ContentId { get; set; }
+        public int ContentId { get; set; }
         public virtual ICollection<AppUser> Users { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public static List<string[]> Placements { get; set; }

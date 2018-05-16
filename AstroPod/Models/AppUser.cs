@@ -46,6 +46,8 @@ namespace AstroPod.Models
 
 
         public AppUser() {
+            this.Comments = new HashSet<Comment>();
+
         }
 
         public  void SetZod()
