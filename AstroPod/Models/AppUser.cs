@@ -22,6 +22,8 @@ namespace AstroPod.Models
         public DateTime BirthDate { get; set; }
         public double UserSun { get; set;}
         public string SunZod { get; set; }
+        public int SunId { get; set; }
+        public int MoonId { get; set; }
         public double UserMoon { get; set; }
         public string MoonZod { get; set; }
         public double UserMerc{ get; set; }
@@ -51,14 +53,17 @@ namespace AstroPod.Models
             if (UserSun >= 0 && UserSun <= 30)
             {
                 SunZod = "Aries";
+                SunId = 0;
  }
             else if (UserSun >= 30 && UserSun <= 60)
             {
                 SunZod = "Taurus";
+                
           }
             else if (UserSun >= 60 && UserSun <= 90)
             {
                 SunZod = "Gemini";
+     
           }
             else if (UserSun >= 90 && UserSun <= 120)
             {
@@ -105,6 +110,7 @@ namespace AstroPod.Models
             if (UserMoon >= 0 && UserMoon <= 30)
             {
                 MoonZod = "Aries";
+                MoonId = 2;
             }
             else if (UserMoon >= 30 && UserMoon <= 60)
             {
@@ -133,6 +139,7 @@ namespace AstroPod.Models
             else if (UserMoon >= 210 && UserMoon <= 240)
             {
                 MoonZod = "Scorpio";
+                MoonId = 64;
             }
             else if (UserMoon >= 240 && UserMoon <= 270)
             {

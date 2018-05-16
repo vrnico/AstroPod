@@ -17,7 +17,15 @@
     @if (User.IsInRole("Admin"))
     {
         <ul>
-           
+            @foreach (var astro in Model)
+            {
+
+
+                <li>Username: @Html.DisplayFor(modelItem => astro.UserName)</li>
+
+
+
+            }
         </ul>
     }
 

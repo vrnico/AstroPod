@@ -19,8 +19,8 @@
 
         <h1>Hello @User.Identity.Name</h1>
         <h2>Born: @Model.BirthDate</h2>
-        <h2>Sun Sign: <a href="content/{id}">@Model.SunZod</a></h2>
-        <h2>Moon Sign: @Model.MoonZod</h2>
+        <h2>Sun Sign: <a href="Content/@Model.SunId">@Model.SunZod</a></h2>
+        <h2>Moon Sign:<a href="Content/@Model.MoonId"> @Model.MoonZod </a></h2>
         <h2>Mercury Sign: @Model.MercZod</h2>
         <h2>Venus Sign: @Model.VenusZod</h2>
         <h2>Mars Sign: @Model.MarsZod</h2>

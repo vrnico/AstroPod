@@ -30,9 +30,9 @@ namespace AstroPod.Models
 
         public static void SetList()
         {
-            List<string[]> Placements = new List<string[]>();
-            string[] planet = new string[] { "Sun" };
-            string[] zod = new string[] { "Aries" };
+            Placements = new List<string[]> { };
+            string[] planet = new string[] { "Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" };
+            string[] zod = new string[] { "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces" };
             foreach (string z in zod)
             {
                 foreach (string p in planet)

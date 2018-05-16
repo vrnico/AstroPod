@@ -28,17 +28,21 @@ namespace AstroPod.Controllers
             _signInManager = signInManager;
             _db = db;
         }
-
-        public IActionResult Index()
+        [HttpGet("/Content/{id}")]
+        public IActionResult Index(int id)
         {
            
             string thisUser = _userManager.GetUserId(User);
             AppUser user = _db.Users.Where(u => u.Id == thisUser).FirstOrDefault();
             ViewBag.User = _db.Users.Where(u => u.Id == thisUser).FirstOrDefault();
-
+            List<AppUser> sunMatches = _db.Users.Where(u => u.SunZod == user.SunZod).ToList();
             AstroPod.Models.Content.SetList();
-      
-            return View();
+            var contentPlacements = AstroPod.Models.Content.Placements;
+            string[] placement = AstroPod.Models.Content.Placements[id];
+            
+
+
+            return View(sunMatches);
 
             
            
