@@ -13,7 +13,6 @@
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.SunZodId)
     <div class="form-group">
         @Html.LabelFor(model => model.Author)
         @Html.TextBoxFor(x => x.Author, new { @class = "form-control" })

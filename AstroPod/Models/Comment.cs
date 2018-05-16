@@ -17,9 +17,8 @@ namespace AstroPod.Models
         [Display(Name = "Comment Body")]
         public string TextBody { get; set; }
         public DateTime PostDate { get; set; }
-        public string SunZodId { get; set; }
-        public string ContentId { get; set; }
         public virtual AppUser User { get; set; }
+        public string ContentId { get; set; }
         public virtual Content Content { get; set; }
     }
 }

@@ -29,16 +29,26 @@ namespace AstroPod.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
-            string id = _userManager.GetUserId(User);
-            
             AppUser user = _db.Users.Where(u => u.Id == id).FirstOrDefault();
-            ViewBag.User = _db.Users.Where(u => u.Id == id).FirstOrDefault();
-            List<AppUser> sunMatches = _db.Users.Where(u => u.SunZod == user.SunZod).ToList();
+            Content thisContent = _db.Content.FirstOrDefault(c => c.ContentId == user.SunZod);
+
+            Content model = _db.Content.Include(s => s.Comments).FirstOrDefault(o => o.ContentId == id);
+            return View(model);
+
            
-            return View(sunMatches);
+            //string id = _userManager.GetUserId(User);
+            
+            //AppUser user = _db.Users.Where(u => u.Id == id).FirstOrDefault();
+            //ViewBag.User = _db.Users.Where(u => u.Id == id).FirstOrDefault();
+            //List<AppUser> sunMatches = _db.Users.Where(u => u.SunZod == user.SunZod).ToList();
+           
+            //return View(sunMatches);
         }
+
+      
+
 
         public IActionResult IndexVM()
         {
@@ -73,42 +83,31 @@ namespace AstroPod.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public IActionResult AddConfirmed(int id)
+        public IActionResult AddConfirmed(string id)
         {
             Content content = _db.Content.FirstOrDefault(i => i.ContentId == id);
-            content.Title = Request.Form["title"];
-            content.Description = Request.Form["description"];
-            content.Description = Request.Form["image"];
             _db.Entry(content).State = EntityState.Modified;
-            _db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        [Authorize(Roles = "Admin")]
-        public IActionResult Delete(int id)
-        {
-            _db.Content.Remove(_db.Content.FirstOrDefault(i => i.ContentId == id));
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         public IActionResult Details(string id)
         {
-
-            var thisSunZod = _db.Content.Include(u => u.User).SingleOrDefault(q => q.SunZodId == id);
+            var thisContent = _db.Content.Include(c => c.User).SingleOrDefault(q => q.ContentId == id);
             Comment comment = new Comment
             {
-                Content = thisSunZod,
-                SunZodId = id
+                Content = thisContent,
+                ContentId = id
             };
+            thisContent.Comments = _db.Comments
+                .Where(Comments => Comments.ContentId == id)
+                .OrderByDescending(x => x.PostDate)
+                .Include(u => u.User)
+                .ToList();
+            ViewBag.Comments = _db.Comments.Where(a => a.ContentId == id).Include(u => u.User).ToList();
 
-           
-
-            ViewBag.Comments = _db.Comments.Where(a => a.SunZodId == id).Include(u => u.User).ToList();
-
-            return View();
+            return View(comment);
         }
-
 
         public IActionResult HelloAjax()
         {

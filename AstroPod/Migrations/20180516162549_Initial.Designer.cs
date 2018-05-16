@@ -8,7 +8,7 @@ using AstroPod.Models;
 namespace AstroPod.Migrations
 {
     [DbContext(typeof(AstroPodDbContext))]
-    [Migration("20180516015126_Initial")]
+    [Migration("20180516162549_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -106,25 +106,22 @@ namespace AstroPod.Migrations
 
             modelBuilder.Entity("AstroPod.Models.Comment", b =>
                 {
-                    b.Property<string>("ContentId")
+                    b.Property<int>("CommentId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Author");
 
-                    b.Property<int>("CommentId");
+                    b.Property<string>("ContentId");
 
                     b.Property<DateTime>("PostDate");
-
-                    b.Property<string>("SunZodId");
 
                     b.Property<string>("TextBody");
 
                     b.Property<string>("UserId");
 
-                    b.HasKey("ContentId");
+                    b.HasKey("CommentId");
 
-                    b.HasIndex("SunZodId")
-                        .IsUnique();
+                    b.HasIndex("ContentId");
 
                     b.HasIndex("UserId");
 
@@ -133,22 +130,12 @@ namespace AstroPod.Migrations
 
             modelBuilder.Entity("AstroPod.Models.Content", b =>
                 {
-                    b.Property<string>("SunZodId")
+                    b.Property<string>("ContentId")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<int>("ContentId");
-
-                    b.Property<string>("Description");
-
-                    b.Property<string>("Image");
-
-                    b.Property<string>("Title");
 
                     b.Property<string>("UserId");
 
-                    b.HasKey("SunZodId");
-
-                    b.HasAlternateKey("ContentId");
+                    b.HasKey("ContentId");
 
                     b.HasIndex("UserId");
 
@@ -265,11 +252,11 @@ namespace AstroPod.Migrations
             modelBuilder.Entity("AstroPod.Models.Comment", b =>
                 {
                     b.HasOne("AstroPod.Models.Content", "Content")
-                        .WithOne("Comments")
-                        .HasForeignKey("AstroPod.Models.Comment", "SunZodId");
+                        .WithMany("Comments")
+                        .HasForeignKey("ContentId");
 
                     b.HasOne("AstroPod.Models.AppUser", "User")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("UserId");
                 });
 

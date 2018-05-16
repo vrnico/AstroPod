@@ -25,7 +25,7 @@ namespace AstroPod.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(_db.Comments.Include(comments => comments.Content).ToList());
         }
 
         public IActionResult Create()
@@ -45,7 +45,7 @@ namespace AstroPod.Controllers
 
             _db.Comments.Add(comment);
             await _db.SaveChangesAsync();
-            return RedirectToAction("Details", "Content", new { id = comment.SunZodId });
+            return RedirectToAction("Details", "Content", new { id = comment.ContentId });
         }
 
         [HttpPost]
@@ -53,7 +53,7 @@ namespace AstroPod.Controllers
         {
             _db.Remove(comment);
             _db.SaveChanges();
-            return RedirectToAction("Details", "Content", new { id = comment.SunZodId });
+            return RedirectToAction("Details", "Content");
         }
 
     }

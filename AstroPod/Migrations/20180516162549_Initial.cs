@@ -86,18 +86,13 @@ namespace AstroPod.Migrations
                 name: "Content",
                 columns: table => new
                 {
-                    SunZodId = table.Column<string>(nullable: false)
+                    ContentId = table.Column<string>(nullable: false)
                         .Annotation("MySql:ValueGeneratedOnAdd", true),
-                    ContentId = table.Column<int>(nullable: false),
-                    Description = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true),
-                    Title = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Content", x => x.SunZodId);
-                    table.UniqueConstraint("AK_Content_ContentId", x => x.ContentId);
+                    table.PrimaryKey("PK_Content", x => x.ContentId);
                     table.ForeignKey(
                         name: "FK_Content_AspNetUsers_UserId",
                         column: x => x.UserId,
@@ -196,23 +191,22 @@ namespace AstroPod.Migrations
                 name: "Comments",
                 columns: table => new
                 {
-                    ContentId = table.Column<string>(nullable: false)
+                    CommentId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGeneratedOnAdd", true),
                     Author = table.Column<string>(nullable: true),
-                    CommentId = table.Column<int>(nullable: false),
+                    ContentId = table.Column<string>(nullable: true),
                     PostDate = table.Column<DateTime>(nullable: false),
-                    SunZodId = table.Column<string>(nullable: true),
                     TextBody = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Comments", x => x.ContentId);
+                    table.PrimaryKey("PK_Comments", x => x.CommentId);
                     table.ForeignKey(
-                        name: "FK_Comments_Content_SunZodId",
-                        column: x => x.SunZodId,
+                        name: "FK_Comments_Content_ContentId",
+                        column: x => x.ContentId,
                         principalTable: "Content",
-                        principalColumn: "SunZodId",
+                        principalColumn: "ContentId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Comments_AspNetUsers_UserId",
@@ -234,10 +228,9 @@ namespace AstroPod.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comments_SunZodId",
+                name: "IX_Comments_ContentId",
                 table: "Comments",
-                column: "SunZodId",
-                unique: true);
+                column: "ContentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_UserId",

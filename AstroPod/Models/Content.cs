@@ -11,13 +11,13 @@ namespace AstroPod.Models
     [Table("Content")]
     public class Content
     {
+        public Content()
+        {
+            this.Comments = new HashSet<Comment>();
+        }
         [Key]
-        public int ContentId { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Image { get; set; }
-        public string SunZodId { get; set; }
+        public string ContentId { get; set; }
         public virtual AppUser User { get; set; }
-        public virtual Comment Comments { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

@@ -34,10 +34,7 @@ namespace AstroPod.Models
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Content>()
-               .HasKey(t => new { t.SunZodId});
-            builder.Entity<Comment>()
-                .HasKey(t => new { t.ContentId });
+
 
         }
     }

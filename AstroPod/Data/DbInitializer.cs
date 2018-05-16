@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Linq;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -25,8 +24,17 @@ namespace AstroPod.Data
 
             };
 
+            var content = new Content[]
+            {
+                new Content() { ContentId = "Capricorn"},
+                new Content() { ContentId = "Gemini"}
+            };
 
 
+            foreach (var c in content)
+            {
+                context.Content.Add(c);
+            }
 
             foreach (var r in roles)
             {

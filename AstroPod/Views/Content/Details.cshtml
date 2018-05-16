@@ -14,7 +14,7 @@
 {
     @using (Html.BeginForm("Create", "Comment", FormMethod.Post))
     {
-        @Html.HiddenFor(model => model.SunZodId)
+        @Html.HiddenFor(model => model.CommentId)
         <div class="form-group">
             <label>Add Comment To Post</label>
             @Html.TextBoxFor(model => model.TextBody, new { @class = "form-control" })
@@ -45,7 +45,7 @@
                     @using (Html.BeginForm("Delete", "Comment"))
                     {
                         @Html.Hidden("CommentId", thisComment.CommentId)
-                        @Html.Hidden("BlogPostId", thisComment.SunZodId)
+                        @Html.Hidden("ContentId", thisComment.ContentId)
                         <button class="btn danger-button btn-xs delete-button" type="submit" value="Delete">Delete</button>
                     }
 
