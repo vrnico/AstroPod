@@ -20,34 +20,54 @@ namespace AstroPod.Models
     public class AppUser : IdentityUser
     {
         public DateTime BirthDate { get; set; }
+
         public double UserSun { get; set; }
         public string SunZod { get; set; }
         public int SunId { get; set; }
         public string SunDesc { get; set; }
-        public int MoonId { get; set; }
-        public int MercId{ get; set;}
-        public int VenusId{ get; set;}
-        public int MarsId{ get; set;}
-        public int JupiterId{ get; set;}
-        public int SaturnId{ get; set;}
-        public int UranusId { get; set;}
-        public int NeptuneId{ get; set;}
+
+
         public double UserMoon { get; set; }
         public string MoonZod { get; set; }
-        public double UserMerc{ get; set; }
+        public int MoonId { get; set; }
+        public string MoonDesc { get; set; }
+
+        public double UserMerc { get; set; }
         public string MercZod { get; set; }
+        public int MercId{ get; set;}
+        public string MercDesc { get; set; }
+
         public double UserVenus { get; set; }
         public string VenusZod { get; set; }
+        public int VenusId{ get; set;}
+        public string VenusDesc { get; set; }
+
         public double UserMars { get; set; }
+        public int MarsId{ get; set;}
+        public string MarsDesc { get; set; }
         public string MarsZod { get; set; }
+
         public double UserJupiter { get; set; }
+        public int JupiterId{ get; set;}
+        public string JupiterDesc { get; set; }
         public string JupiterZod { get; set; }
+
+
         public double UserSaturn { get; set; }
         public string SaturnZod { get; set; }
+        public int SaturnId{ get; set;}
+        public string SaturnDesc { get; set; }
+
         public double UserUranus { get; set; }
         public string UranusZod { get; set; }
+        public int UranusId { get; set;}
+        public string UranusDesc { get; set; }
+
         public double UserNeptune { get; set; }
         public string NeptuneZod { get; set; }
+        public int NeptuneId{ get; set;}
+        public string NeptuneDesc { get; set; }
+
         public virtual ICollection<Comment> Comments { get; set; }
 
     
@@ -151,6 +171,7 @@ namespace AstroPod.Models
             {
                 MoonZod = "Cancer";
                 MoonId = 28;
+                MoonDesc = "The Moon is Cancer's natural ruler. Moon in Cancer represents somebody who is intune with their lunar energy. This archetype is punctuated by a inherent intuition for the emotional needs of oneself and others around them. At its peak this energy can represent an innate empathetic ability to channel knowledge of the psyche into all forms of existence. Unevolved Moon in Cancer is prone to projecting their emotional landscape onto others, and various social pratfalls, a product of their insecurity.";
             }
             else if (UserMoon >= 120 && UserMoon <= 150)
             {
@@ -191,6 +212,7 @@ namespace AstroPod.Models
             {
                 MoonZod = "Pisces";
                 MoonId = 100;
+                MoonDesc = "Moon in Pisces is the placement of the subjective wanderer. A gifted artist, or suffering nihlist, perhaps both. There are some who are able to counter the deceptive aspects of this placement by gaining an understanding of their subconcious. Either way this is a placement that necesitates a deep understanding of one's inner psyche. Those with moon in Pisces are prone to feelings of disassociation and general ennui.";
             }
         }
 
@@ -212,6 +234,7 @@ namespace AstroPod.Models
             {
                 MercZod = "Gemini";
                 MercId = 20;
+                MercDesc = "Mercury is Gemini's ruling planet. Both Virgo and Gemini fall under the fleet-footed planet's rulership, and their interaction is that of the left and the right brain. Using this analogy Gemini is representative of the right brain. Artistically capable, communicative, and adaptable. Take warning though, the positive aspects of this influence can be flipped on their side, exposing a sort of confusing flightiness that others may find offputting. Either way Mercury in Gemini is an excellent broadcaster of thoughts, an archetype well worth getting to know!";
             }
             else if (UserMerc >= 90 && UserMerc <= 120)
             {
@@ -284,6 +307,7 @@ namespace AstroPod.Models
             {
                 VenusZod = "Cancer";
                 VenusId = 30;
+                VenusDesc = "Venus is Cancer places a priority in an emotionally intellectual aesthetic. This archetype may present as someone who is readily available for deep and reaching discussion. Venus in Cancer may carry their aesthetic weight through their face and eyes. Generally intuitive, their emotions can be easy to trace through facial gestures.";
             }
             else if (UserVenus >= 120 && UserVenus <= 150)
             {
@@ -422,6 +446,7 @@ namespace AstroPod.Models
             {
                 JupiterZod = "Leo";
                 JupiterId = 41;
+                JupiterDesc = "";
             }
             else if (UserJupiter >= 150 && UserJupiter <= 180)
             {
@@ -437,6 +462,7 @@ namespace AstroPod.Models
             {
                 JupiterZod = "Scorpio";
                 JupiterId = 68;
+                JupiterDesc = "Jupiter in Scorpio enlists itself as an overseer of the dark arts. While others may become disturbed, Scorpio Jupiter indulges in the mysterious, and overcomes the aversions of the crowd for the sake of the experience. This archetype sees its existence as an opportunity for greater understanding. Through exploring the murky unknown, they are able to provide truth to an otherwise illusory status quo.";
             }
             else if (UserJupiter >= 240 && UserJupiter <= 270)
             {
