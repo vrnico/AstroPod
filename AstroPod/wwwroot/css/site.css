@@ -3,6 +3,7 @@
     padding-bottom: 20px;
     background-color: black !important;
     color: white !important;
+    font-family: 'Source Code Pro', monospace !important;
 }
 
 a-scene {
@@ -25,10 +26,19 @@ a-scene {
     color: white;
 }
 
+    .welcome a:hover {
+        color: white;
+        transform: skewY(20deg);
+    }
+
 .comment {
     background-color: grey;
     padding: 2em;
     margin: 1em;
+}
+
+.input-txt input {
+    color: black;
 }
 
 /* Wrapping element */

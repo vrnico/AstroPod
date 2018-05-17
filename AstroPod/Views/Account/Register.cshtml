@@ -10,7 +10,7 @@
 <h2>Register a new user</h2>
 <br />
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
-{
+{<div class="input-txt">
     <div class="row">
         @Html.LabelFor(user => user.Email)
         @Html.TextBoxFor(user => user.Email)
@@ -34,7 +34,8 @@
     <div class="row">
         <label>BIRTHDATE</label>
         @Html.TextBoxFor(user => user.BirthDate, new { @type = "date, hour, minute" })
-        <label> in this format 1/1/11 11:11 (use military time for PM)</label>
+        <label> in this format 1/1/1991 11:11 (use military time for PM)</label>
+    </div>
     </div>
     <br />
 
@@ -50,4 +51,4 @@
     <br />
 
     <input type="submit" value="Register" class="btn-lg btn-success" />
-}
+    }

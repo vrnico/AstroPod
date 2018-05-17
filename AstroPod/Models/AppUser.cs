@@ -23,6 +23,7 @@ namespace AstroPod.Models
         public double UserSun { get; set; }
         public string SunZod { get; set; }
         public int SunId { get; set; }
+        public string SunDesc { get; set; }
         public int MoonId { get; set; }
         public int MercId{ get; set;}
         public int VenusId{ get; set;}
@@ -63,18 +64,22 @@ namespace AstroPod.Models
             {
                 SunZod = "Aries";
                 SunId = 0;
+                SunDesc = "";
  }
             else if (UserSun >= 30 && UserSun <= 60)
             {
                 SunZod = "Taurus";
                 SunId = 9;
-                
-          }
+                SunDesc = "";
+
+            }
             else if (UserSun >= 60 && UserSun <= 90)
             {
                 SunZod = "Gemini";
                 SunId = 18;
-     
+                SunDesc = "Sun in Gemini represents an energy that is adaptable, innovative, and somewhat chaotic. Gemini is ruled by Mercury, and as the planet of communication dictates this sign's archetype, those with this placement follow suit. Writing, communication technology, creative arts, and anything in the realm of thought broadcasting are of great importance to Gemini Sun. The dualistic nature of this sign has less to do with being two-faced, and more to do with gaining understanding of both sides of the coin. Some will cast off Geminian energy as being hypocritical, while others will celebrate their ability to flawlessly change course with the winds that suit them.";
+
+
           }
             else if (UserSun >= 90 && UserSun <= 120)
             {
