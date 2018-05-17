@@ -8,9 +8,10 @@ using AstroPod.Models;
 namespace AstroPod.Migrations
 {
     [DbContext(typeof(AstroPodDbContext))]
-    partial class AstroPodDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180516233518_PlanetIds")]
+    partial class PlanetIds
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.5");
