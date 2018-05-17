@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AstroPod.Models.Comment>
+
+@{
+    ViewData["Title"] = "AstroPod";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>What's going on today in the astropod?</h2>
+<hr />
+
+
+@foreach (var post in Model)
+{
+    <div class="comment">
+        <h3 class="post-title">@Html.DisplayFor(modelPost => post.Author)</h3>
+        <h4>@ViewBag.User.UserName | @post.PostDate</h4>
+        <p>@Html.DisplayFor(modelPost => post.TextBody)</p>
+       
+    </div>
+}

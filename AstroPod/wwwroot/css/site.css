@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: black !important;
+    color: white !important;
 }
 
 a-scene {
@@ -8,6 +10,25 @@ a-scene {
     display: block;
     width: 50%;
 
+}
+
+.welcome img {
+    border-radius: 50em;
+    z-index: -1;
+}
+
+.welcome btn {
+    z-index: auto;
+}
+
+.welcome a {
+    color: white;
+}
+
+.comment {
+    background-color: grey;
+    padding: 2em;
+    margin: 1em;
 }
 
 /* Wrapping element */

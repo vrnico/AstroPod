@@ -82,14 +82,12 @@ namespace AstroPod.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize(Roles = "Admin")]
         public IActionResult Add(int id)
         {
             ViewBag.id = id;
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult AddConfirmed(int id)
         {

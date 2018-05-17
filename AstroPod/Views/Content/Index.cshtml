@@ -9,70 +9,43 @@
 
 
 
-<h1>@ViewBag.User.UserName's AstroDB</h1>
-
+<h1>@ViewBag.User.UserName's AstroPod</h1>
+<p>Below is a list of other users with @ViewBag.User.SunZod Sun </p>
 
 
 <div class="content">
     @if (User.IsInRole("Admin"))
     {
-        <ul>
-            @foreach (var astro in Model)
-            {
+        <table class="table">
+            <th>username</th>
+            <th>born</th>
+
+            <tr class="tbody">
+                @foreach (var astro in Model)
+                {
 
 
-                <li>Username: @Html.DisplayFor(modelItem => astro.UserName)</li>
+                    <td>@Html.DisplayFor(modelItem => astro.UserName)</td>
+                    <td>@Html.DisplayFor(modelItem => astro.BirthDate)</td>
 
 
 
-            }
-        </ul>
+                }
+
+            </tr>
+        </table>
     }
 
-    <div class="btn-lg btn btn-danger">@Html.ActionLink("Comment", "Create", "Comment")</div>
-    <table class="table">
-        <tr>
-            <th>Title</th>
-            <th>Image</th>
-            <th>Description</th>
-            @if (User.IsInRole("Admin"))
-            {
-                <th>Admin Actions</th>}
-        </tr>
-        <tbody class="tbody"></tbody>
+        <h3> See what others with @ViewBag.User.SunZod Sun are saying! </h3>
+            @Html.ActionLink("Join this AstroPod", "New", "Comment")
 
+ 
+   
 
-
-        <script>
-
-    //ajax call
-    $.ajax({
-        type: 'GET',
-        url: '@Url.Action("HelloAjax")', success: function (result) {
-            result.forEach(function (content) {
-                console.log("RESULT: " + result)
-                $(".tbody").append(
-                    "<tr>" +
-                    "<td>" + content.title + "</td>" +
-                    "<td><img src='" + content.image + "'></td>" +
-                    "<td>" + content.description + "</td>" +
-                    "<td>" +
-                    "<a href='Content/Add/" + content.contentId + "'>Edit Content</a> | " +
-                    "<a href='Content/Delete/" + content.contentId + "'>Delete</a>" +
-                    "</td>" +
-                    "</tr>"
-                )
-            })
-        }
-    });
-        </script>
-
-    </table>
-</div>
-<a-scene embedded>
-    <a-box position="1 0.5 -3" rotation="0 45 0" color="@User.Identity.Name"></a-box>
-    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-    <a-sky color="#ECECEC"></a-sky>
-</a-scene>
+    <a-scene embedded>
+        <a-box position="1 0.5 -3" rotation="0 45 0" color="@User.Identity.Name"></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>

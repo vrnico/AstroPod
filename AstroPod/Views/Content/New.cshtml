@@ -4,29 +4,21 @@
 }
 
 @using AstroPod.Models
-@model Content
+@model Comment
 
 <br>
-<h2>Add New Content</h2>
+<h2>Add a New Comment</h2>
 <br />
-@using (Html.BeginForm("New", "Content", FormMethod.Post))
+@using (Html.BeginForm("New", "Comment", FormMethod.Post))
 {
     <div class="row">
-        @Html.LabelFor(content => content.Title)
-        @Html.TextBoxFor(content => content.Title)
+        @Html.LabelFor(item => item.TextBody)
+        @Html.TextBoxFor(item => item.TextBody)
     </div>
     <br />
-    <div class="row">
-        @Html.LabelFor(content => content.Description)
-        @Html.EditorFor(content => content.Description)
-    </div>
-
-    <div class="row">
-        @Html.LabelFor(content => content.Image)
-        @Html.EditorFor(content => content.Image)
-    </div>
     <br />
     <br />
 
     <input type="submit" value="Add" class="btn-lg btn-success" />
 }
+

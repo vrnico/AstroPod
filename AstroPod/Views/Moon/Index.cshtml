@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+@model IEnumerable<AstroPod.Models.AppUser>
+
+
+
+
+<h1>@ViewBag.User.UserName's AstroPod</h1>
+<p>Below is a list of other users with @ViewBag.User.MoonZod Moon </p>
+
+
+<div class="content">
+    @if (User.IsInRole("Admin"))
+    {
+        <table class="table">
+            <th>username</th>
+            <th>born</th>
+
+            <tr class="tbody">
+                @foreach (var astro in Model)
+                {
+
+
+                    <td>@Html.DisplayFor(modelItem => astro.UserName)</td>
+                    <td>@Html.DisplayFor(modelItem => astro.BirthDate)</td>
+
+
+
+                }
+
+            </tr>
+        </table>
+    }
+
+    <div class="btn-lg btn btn-danger">@Html.ActionLink("Comment", "Create", "Comment")</div>

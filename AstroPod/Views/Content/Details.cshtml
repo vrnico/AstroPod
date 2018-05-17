@@ -45,7 +45,7 @@
                     @using (Html.BeginForm("Delete", "Comment"))
                     {
                         @Html.Hidden("CommentId", thisComment.CommentId)
-                        @Html.Hidden("ContentId", thisComment.ContentId)
+                 
                         <button class="btn danger-button btn-xs delete-button" type="submit" value="Delete">Delete</button>
                     }
 
