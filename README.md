@@ -98,7 +98,8 @@ Enjoy your brand new AstroPod Database!
 ## Contact
 questions/comments/concerns
 * [nico.daunt@gmail.com](mailto:nico.daunt@gmail.com)
-* [PERSONAL WEBSITE](nicodaunt.com)
+* [PERSONAL WEBSITE](http://www.nicodaunt.com)
+
 
 
 
